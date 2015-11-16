@@ -48,10 +48,6 @@ public class mazeBoard1 implements mazeBoard{
 		a[2][5].setDown(false);
 		
 	}
-	private void setWall(int x,int y){
-		
-	}
-
-
+	
 
 }

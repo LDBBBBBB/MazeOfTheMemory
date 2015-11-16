@@ -29,15 +29,12 @@ public class player {
 		this._ylocation = _ylocation;
 	}
 	
-	public int get_moveCount(){return _moveCount;}
-
-	
-
-	private int currentLocation(){
-		return 0;
+	public int get_moveCount(){
+		return _moveCount;
 	}
-	private void canMove(){
-		
+	
+	public void increaseMoveCount(){
+		_moveCount++;
 	}
 	
 	
@@ -69,6 +66,8 @@ public class player {
 		set_ylocation(0);
 	}
 	
+	
+	//메소드는 필요하지만, 지금 당장 별다른 메세지를 출력할 필요는 없을 것 같아서 비워뒀어요~
 	private void outOfBoundary(){
 		
 	}

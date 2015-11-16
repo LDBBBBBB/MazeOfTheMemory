@@ -25,7 +25,7 @@ public class AppController {
 		return _Scanner.nextInt();
 
 	}
-	private char move(){
+	private char direction(){
 		System.out.println("이동을 입력하세요 wasd");
 		return _Scanner.next().charAt(0);
 	}
@@ -37,22 +37,36 @@ public class AppController {
 		board1.set();
 		//이동을 입력하세요 wasd 
 
-		while(playstart()==1){
-
-			while(canMove(move())){
-
-				current();
-				System.out.println(c);
-				if(countHit>5){endgame();break;}
+		//############################
+		// 이하의 메뉴는 안드로이드 ui에 따라 달라질 여지가 있습니다
+		//지금은 위에 있는 방식대로 진행합니다.
+		if(playstart()==1){
+			
+			while(move(direction())){				
+					current();
+					user1.increaseMoveCount();
+					System.out.println(user1.get_moveCount());
+					if(user1.get_moveCount()>=5){endgame();break;}
+					
 			}
-		}
 
+			
+		}
+		else if(playstart()==2){
+			System.out.println("미구현");
+		}
+		else{
+			System.out.println("게임방법설명");
+		}
 	}
+		
 	private void endgame(){
 		System.out.println("게임이 종료되었습니다.");
 	}
-	private boolean canMove(char move){
-		switch (move) {
+	
+	
+	private boolean move(char direction){
+		switch (direction) {
 		case 'w':
 			if(board1.a[user1.get_xlocation()][user1.get_ylocation()].canGoUp()){
 				user1.moveUp();
@@ -91,9 +105,13 @@ public class AppController {
 		}
 		return true;
 	}
+	
+	
 	private void current(){
 		System.out.println("지금 위치는 : "+user1.get_xlocation()+","+user1.get_ylocation());
 	}
+	
+	
 	private boolean selectMaze(){
 		return false;
 	}

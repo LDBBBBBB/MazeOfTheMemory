@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.oop.themazeofmemory.LoadingActivity"/>
+      <point      
+        x = "1176"      
+        y = "900"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.oop.themazeofmemory.GameActivity"/>
+      <point      
+        x = "2736"      
+        y = "156"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.oop.themazeofmemory.MainActivity"/>
+      <point      
+        x = "148"      
+        y = "-12"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

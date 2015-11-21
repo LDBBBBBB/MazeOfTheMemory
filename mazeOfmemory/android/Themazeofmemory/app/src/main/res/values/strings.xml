@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">The maze of memory</string>
+    <string name="button_pause">pause</string>
+    <string name="image_title">title</string>
+    <string name="button_start">start</string>
+    <string name="button_option">option</string>
+    <string name="button_quit">quit</string>
+    <string name="textview_loading">Loading</string>
+</resources>
